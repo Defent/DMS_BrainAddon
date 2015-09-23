@@ -1,0 +1,697 @@
+version=1;
+class GraphItems
+{
+	class Item0
+	{
+		Flags=250;
+		BasicText="";
+		Left=-40.348846;
+		Top=-142.44186;
+		Right=49.651154;
+		Bottom=-92.441864;
+		BgColor=255;
+		class ItemInfo
+		{
+			Text="INIT";
+			lStyle=-842150451;
+			Shape=6;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=700;
+			FontUnderline=1;
+			FontCharSet=0;
+			ItemType=0;
+			class ItemInfo
+			{
+				Id=1;
+			};
+		};
+	};
+	class Item1
+	{
+		Flags=218;
+		BasicText="";
+		Left=-35.726685;
+		Top=-53.095764;
+		Right=54.273315;
+		Bottom=-3.0957642;
+		BgColor=65535;
+		class ItemInfo
+		{
+			Text="wait";
+			lStyle=-842150451;
+			Shape=2;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=4;
+			class ItemInfo
+			{
+				Id=5;
+			};
+		};
+	};
+	class Item2
+	{
+		Flags=250;
+		BasicText="";
+		Left=-32.978516;
+		Top=59.579956;
+		Right=57.0215;
+		Bottom=109.57996;
+		BgColor=16777215;
+		class ItemInfo
+		{
+			Text="is unit alive";
+			lStyle=-842150451;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=2;
+			class ItemInfo
+			{
+				Id=7;
+				InitCode="_alive = !(isNull _unit);" \n "" \n "if (_alive) then {" \n "	_alive = alive _unit;" \n "};";
+			};
+		};
+	};
+	class Item3
+	{
+		Flags=218;
+		BasicText="";
+		Left=-130.99722;
+		Top=120.95624;
+		Right=-40.997223;
+		Bottom=170.95624;
+		BgColor=65535;
+		class ItemInfo
+		{
+			Text="dead";
+			lStyle=-842150451;
+			Shape=2;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=4;
+			class ItemInfo
+			{
+				Id=8;
+				Condition="!_alive";
+			};
+		};
+	};
+	class Item4
+	{
+		Flags=250;
+		BasicText="";
+		Left=-165.80762;
+		Top=199.73767;
+		Right=-75.807587;
+		Bottom=249.73766;
+		BgColor=33023;
+		class ItemInfo
+		{
+			Text="exit thing";
+			lStyle=-842150451;
+			Shape=6;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=700;
+			FontCharSet=0;
+			ItemType=1;
+			class ItemInfo
+			{
+				Id=9;
+			};
+		};
+	};
+	class Item5
+	{
+		Flags=218;
+		BasicText="";
+		Left=-35.726746;
+		Top=168.59149;
+		Right=54.273254;
+		Bottom=218.59149;
+		BgColor=65535;
+		class ItemInfo
+		{
+			Text="alive";
+			lStyle=-842150451;
+			Shape=2;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=4;
+			class ItemInfo
+			{
+				Id=10;
+				Condition="_alive";
+			};
+		};
+	};
+	class Item6
+	{
+		Flags=250;
+		BasicText="";
+		Left=-32.978577;
+		Top=280.31531;
+		Right=57.021439;
+		Bottom=330.31531;
+		BgColor=16777215;
+		class ItemInfo
+		{
+			Text="is target visible";
+			lStyle=-842150451;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=2;
+			class ItemInfo
+			{
+				Id=13;
+				InitCode="_canSee = [_player,_unit] call DMS_LosCheck;" \n "_count = count _canSee;";
+			};
+		};
+	};
+	class Item7
+	{
+		Flags=218;
+		BasicText="";
+		Left=151.59296;
+		Top=280.05609;
+		Right=241.59296;
+		Bottom=330.05609;
+		BgColor=65535;
+		class ItemInfo
+		{
+			Text="not visible";
+			lStyle=-842150451;
+			Shape=2;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=4;
+			class ItemInfo
+			{
+				Id=15;
+				Condition="_count == 0;";
+			};
+		};
+	};
+	class Item8
+	{
+		Flags=218;
+		BasicText="";
+		Left=-24.386749;
+		Top=479.67322;
+		Right=65.613251;
+		Bottom=529.6731;
+		BgColor=65535;
+		class ItemInfo
+		{
+			Text="visible";
+			lStyle=-842150451;
+			Shape=2;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=4;
+			class ItemInfo
+			{
+				Id=16;
+			};
+		};
+	};
+	class Item9
+	{
+		Flags=250;
+		BasicText="";
+		Left=150.9935;
+		Top=385.69995;
+		Right=240.99352;
+		Bottom=435.69995;
+		BgColor=16777215;
+		class ItemInfo
+		{
+			Text="resume buisniess";
+			lStyle=-842150451;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=2;
+			class ItemInfo
+			{
+				Id=32;
+				InitCode="_lost = false;" \n "";
+			};
+		};
+	};
+	class Item10
+	{
+		Flags=218;
+		BasicText="";
+		Left=147.53391;
+		Top=471.82025;
+		Right=245.77838;
+		Bottom=537.39331;
+		BgColor=65535;
+		class ItemInfo
+		{
+			Text="no " \n "whareabouts";
+			lStyle=-842150451;
+			Shape=2;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=4;
+			class ItemInfo
+			{
+				Id=19;
+			};
+		};
+	};
+	class Item11
+	{
+		Flags=250;
+		BasicText="";
+		Left=-292.76093;
+		Top=573.42474;
+		Right=-202.76093;
+		Bottom=623.42487;
+		BgColor=16777215;
+		class ItemInfo
+		{
+			Text="call" \n "engage";
+			lStyle=-842150451;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=2;
+			class ItemInfo
+			{
+				Id=22;
+			};
+		};
+	};
+	class Item12
+	{
+		Flags=250;
+		BasicText="";
+		Left=155.11203;
+		Top=583.97479;
+		Right=245.11206;
+		Bottom=633.97479;
+		BgColor=16777215;
+		class ItemInfo
+		{
+			Text="continue" \n "patrol";
+			lStyle=-842150451;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=2;
+			class ItemInfo
+			{
+				Id=24;
+			};
+		};
+	};
+	class Item13
+	{
+		Flags=218;
+		BasicText="";
+		Left=156.83786;
+		Top=677.91602;
+		Right=246.83786;
+		Bottom=727.91602;
+		BgColor=8421440;
+		class ItemInfo
+		{
+			Text="";
+			lStyle=-842150451;
+			Shape=2;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=8;
+			class ItemInfo
+			{
+				Id=25;
+			};
+		};
+	};
+	class Item14
+	{
+		Flags=250;
+		BasicText="";
+		Left=150.11288;
+		Top=792.53412;
+		Right=240.11292;
+		Bottom=842.53412;
+		BgColor=16777215;
+		class ItemInfo
+		{
+			Text="next step";
+			lStyle=-842150451;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=2;
+			class ItemInfo
+			{
+				Id=26;
+			};
+		};
+	};
+	class Item15
+	{
+		Flags=218;
+		BasicText="";
+		Left=327.99277;
+		Top=797.81763;
+		Right=417.99274;
+		Bottom=847.81757;
+		BgColor=65535;
+		class ItemInfo
+		{
+			Text="is lost";
+			lStyle=-842150451;
+			Shape=2;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=4;
+			class ItemInfo
+			{
+				Id=28;
+			};
+		};
+	};
+	class Item16
+	{
+		Flags=218;
+		BasicText="";
+		Left=-32.169891;
+		Top=793.41473;
+		Right=57.830109;
+		Bottom=843.41473;
+		BgColor=8421440;
+		class ItemInfo
+		{
+			Text="";
+			lStyle=-842150451;
+			Shape=2;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=8;
+			class ItemInfo
+			{
+				Id=29;
+			};
+		};
+	};
+	class Item17
+	{
+		Flags=250;
+		BasicText="";
+		Left=-33.931122;
+		Top=926.38428;
+		Right=56.068878;
+		Bottom=976.38428;
+		BgColor=16777215;
+		class ItemInfo
+		{
+			Text="not lost";
+			lStyle=-842150451;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=0;
+			FontCharSet=0;
+			ItemType=3;
+			class ItemInfo
+			{
+				Id=30;
+			};
+		};
+	};
+};
+class GraphLinks
+{
+	class Link0
+	{
+		From=0;
+		To=1;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link1
+	{
+		From=1;
+		To=2;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link2
+	{
+		From=2;
+		To=3;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link3
+	{
+		From=2;
+		To=5;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link4
+	{
+		From=3;
+		To=4;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link5
+	{
+		From=5;
+		To=6;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link6
+	{
+		From=6;
+		To=7;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link7
+	{
+		From=6;
+		To=8;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link8
+	{
+		From=7;
+		To=9;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link9
+	{
+		From=8;
+		To=11;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link10
+	{
+		From=9;
+		To=10;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link11
+	{
+		From=10;
+		To=12;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link12
+	{
+		From=12;
+		To=13;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link13
+	{
+		From=13;
+		To=14;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link14
+	{
+		From=14;
+		To=15;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link15
+	{
+		From=14;
+		To=16;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+	class Link16
+	{
+		From=16;
+		To=17;
+		Color=6316128;
+		Flags=2;
+		class Extra
+		{
+			ArrowSize=0;
+		};
+	};
+};
+class Globals
+{
+	NextGroupID=1;
+	NextID=33;
+	FSMName="Test one";
+	class DefaultLink
+	{
+		ArrowSize=0;
+	};
+	DefaultLinkColor=6316128;
+	DefaultLinkColorFromSelected=6316287;
+	DefaultLinkColorToSelected=6356832;
+	DefaultLinkUseCustom=1;
+	PZoomLeft=-1192.1256;
+	PZoomRight=1509.0798;
+	PZoomBottom=1062.5122;
+	PZoomTop=-687.59167;
+	Clxs=1403;
+	Clys=909;
+	Aspect=1;
+};
+class Window
+{
+	Flags=2;
+	MaxPosX=-1;
+	MaxPosY=-1;
+	MinPosX=-1;
+	MinPosY=-1;
+	Left=234;
+	Top=234;
+	Right=1674;
+	Bottom=993;
+	ShowCmd=3;
+	SplitPos=1421;
+};
